@@ -9,9 +9,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Bloc de Notas</ion-title>
     </ion-toolbar>
   </ion-header>
+  <hr>
+  <form #formNotas="ngForm" (ngSubmit)="handleSubmit()">
+    <ion-item>
+        <ion-label position="floating">Escriba una nota:</ion-label>
+        <ion-input
+        [(ngModel)]="nota"
+        type="text"
+        required
+        ></ion-input>
+    </ion-item>
+  </form>
+  
+  <ion-button size="full" type="submit">Guardar</ion-button>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>

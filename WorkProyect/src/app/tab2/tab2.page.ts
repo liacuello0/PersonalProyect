@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  public email:string
+  public password:string
 
-  constructor() {}
+  constructor(
+    private _router:Router
+  ) {}
 
+  async handleSubmit()
+  {
+    this._router.navigate(['/tabs/tab3'])
+  }
 }
