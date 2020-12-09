@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  private nota: string
+  private texto: string
 
   constructor() {}
 
-  async handleSubmit(){
-    
+  async handleSubmit(e){
+    console.log(this.nota, this.texto)
+    this.texto = e.target["nota"].value
   }
 }

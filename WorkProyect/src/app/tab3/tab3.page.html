@@ -13,16 +13,20 @@
     </ion-toolbar>
   </ion-header>
   <hr>
-  <form #formNotas="ngForm" (ngSubmit)="handleSubmit()">
+  <form #formNotas="ngForm" (ngSubmit)="handleSubmit($event)">
     <ion-item>
         <ion-label position="floating">Escriba una nota:</ion-label>
         <ion-input
         [(ngModel)]="nota"
+        name="nota"
+        id="nota"
         type="text"
         required
         ></ion-input>
     </ion-item>
   </form>
+
+  <ion-label>{{texto}}</ion-label>
   
   <ion-button size="full" type="submit">Guardar</ion-button>
 
